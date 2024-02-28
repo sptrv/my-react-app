@@ -1,38 +1,243 @@
+/* Загальні стилі */
+
 .App {
-  text-align: center;
+  background-color: #ffffff;
+  background-image: url('./images/fon.png');
+  background-size: cover;
+  background-position: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-container {
+  background-color: #d8d8d8;
+  opacity: 0.92;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.wrapper {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/* Стилі для навігаційної панелі */
+
+.navbar {
+  width: 100%;
+  height: 12%;
+  justify-content: center;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  background-color: #122641;
+}
+
+@media (max-width: 450px) {
+  .navbar {
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar .logo {
+  width: 140px;
+  height: auto;
+}
+
+.navbar .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.navbar .rightside {
+  margin-right: 0px;
+  display: flex;
+  font-weight: 600;
+  font-size: 16px;
+  align-items: center;
+}
+
+@media (max-width: 450px) {
+  .navbar .rightside {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    margin-right: 0px;
+  }
+}
+
+.navbar .rightside div {
+  margin: 0px 10px;
+}
+
+@media (max-width: 450px) {
+  .navbar .rightside div {
+    margin: 10px 0px;
+  }
+}
+
+.navbar .rightside div .navlink {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* Стилі для бокового меню */
+
+.side-navbar {
+  width: 100%;
+  display: flex;
+  margin-top: -100px;
+  margin-left: -22px;
+}
+
+@media (max-width: 540px) {
+  .side-navbar {
+    flex-direction: column;
+  }
+}
+
+.navbar-box {
+  width: 20%;
+  background-color: #7a3318;
+  padding-left: 30px;
+  padding-right:30px;
+  border-right: 4px solid #f3c640;
+}
+
+@media (max-width: 540px) {
+  .navbar-box {
+    width: 100%;
+    padding-top: 5px;
+  }
+}
+
+.side-navbar .navlink {
+  font-weight: bold;
+  font-size: 16px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar-box h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 60px;
+  margin-top: 140px;
+  color: #7a3318;
+}
+
+/* Стилі для кнопок та повідомлень про успіх/помилку */
+
+.btn-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 450px) {
+  .btn-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.success-msg, .error-msg {
+  width: 100%;
+  padding: 14px;
+}
+
+.success-msg {
+  background-color: #12264120;
+  color: #122641;
+}
+
+.error-msg {
+  background-color: #7a341830;
+  color: #7a3318;
+}
+
+.link {
+  color: #8f3d1c;
+  margin-left: 4px;
+}
+
+.link:hover {
+  color: #122641;
+}
+
+/* Стилі для основного вмісту */
+
+.box {
+  width: 600px;
+  min-height: 700px;
+  margin: 30px auto;
+  display: flex;
+  flex: 0.7;
+  flex-direction: column;
+  padding: 30px;
+  margin-top: 200px;
+}
+
+/* Стилі для замовлень */
+
+.order {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  margin-right: 24px;
+  transition: all 0.3s ease-in-out;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.additional-details {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: -50px;
+  margin-bottom: 50px;
+  margin-right: 24px;
+  transition: all 0.3s ease-in-out;
+  padding: 12px;
+  border-radius: 10px; 
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
 }
 
-.App-link {
-  color: #61dafb;
+.order:hover {
+  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.order .text {
+  font-size: 16px;
+  text-align: center;
+  margin-right: 10px;
+  font-weight: bold;
+  width: 100px;
 }
+
+.text {
+  font-weight: bold;
+}
+
+.details-container {
+  display: flex;
+  width: 100%;
+}
+
+.text-details {
+  flex: 1.7;
+}
+
+.payment-buttons {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #626262;
+  height: 100%;
+  margin-left:20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
